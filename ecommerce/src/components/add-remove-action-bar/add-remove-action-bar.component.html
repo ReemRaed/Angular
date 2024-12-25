@@ -1,0 +1,9 @@
+<div class="addRemoveActionBar">
+    <button class="addRemoveActionBar__btn" (click)="action()">
+        <img [src]="leftIcon" width="24px" height="24px" />
+    </button>
+    <span class="addRemoveActionBar__itemNo">{{value}}</span>
+    <button class="addRemoveActionBar__btn" (click)="increment()">
+        <img [src]="rightIcon" width="24px" height="24px" />
+    </button>
+</div>

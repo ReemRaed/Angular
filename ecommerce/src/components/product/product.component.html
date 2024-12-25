@@ -14,16 +14,19 @@
             <div class="product__brand">
                 <p class="product__brandName">{{product.brand}}</p>
             </div>
-            <div class="product__cart">
-                <button class="product__cartBtn">
-                    <img src="https://f.nooncdn.com/s/app/com/noon/icons/quick-atc-add-to-cart-grey.svg" alt="add-to-cart" width="24px" height="24px">
+            <div class="product__cart" >
+                <button class="product__cartBtn" (click)="addToCart()" >
+                    @if(disabled)
+                    {
+                        <img src="https://f.nooncdn.com/s/app/com/noon/icons/quick-atc-add-to-cart-grey.svg" alt="add-to-cart" width="24px" height="24px">
+                    }
+                    @else {
+                        <app-add-remove-action-bar [itemsNumber]="5"></app-add-remove-action-bar>
+                    }
                 </button>
+
             </div>
 
         </div>
-
-        <!-- <p class='product__actions'>
-            <button>Add to Cart</button>
-        </p> -->
     </div>
 </div>
