@@ -1,0 +1,141 @@
+@import "../../scss/abstracts/functions";
+@import "../../scss/abstracts/mixins";
+@import "../../scss/abstracts/variables";
+
+.product {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    border-radius: 6px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    background: $basic-color;
+    border: 1px solid lightgray;
+
+    &__img {
+        width: 100%;
+        border-radius: 6px;
+    }
+
+    &__content {
+        flex: 1;
+        padding: 0.5rem 1rem;
+        display: flex;
+        flex-direction: column;
+        /* Keep items stacked vertically */
+        justify-content: flex-start;
+        /* Align items to the top */
+        gap: 0.5rem;
+        /* Space between items */
+        align-items: stretch;
+        /* Ensures items take full width of the container (optional) */
+    }
+
+    &__price {
+        color: $dark-color;
+        margin: 0;
+        @include font-style();
+        font-weight: bold;
+
+        &::before {
+            content: "EGP";
+            font-weight: normal;
+            font-size: 0.75rem;
+        }
+    }
+
+    &__content h3 {
+        font-size: 1.25rem;
+        color: $dark-color;
+        text-align: center;
+        @include font-style();
+        padding: 0.25rem
+    }
+
+    &__description {
+        @include font-style();
+    }
+
+    .product__status .word-container {
+        position: relative;
+        height: 40px;
+        overflow: hidden;
+    }
+
+    .product__status .product__word-item {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        text-align: center;
+        font-size: 1rem;
+        animation: slideDown 2s infinite;
+    }
+
+    @keyframes slideDown {
+        0% {
+            transform: translateY(-100%);
+            opacity: 0;
+        }
+
+        25% {
+            transform: translateY(0);
+            opacity: 1;
+        }
+
+        75% {
+            transform: translateY(0);
+            opacity: 1;
+        }
+
+        100% {
+            transform: translateY(100%);
+            opacity: 0;
+        }
+    }
+
+
+    &__brand
+    {
+        background-color: $primary-color;
+        width: 70px;
+        padding: 0.4rem;
+        height: fit-content;
+        border-radius: 15px 0px 15px 15px; 
+    }
+    &__brandName
+    {
+        font-size: 14px;
+        font-family: 'Times New Roman', Times, serif;
+    }
+    &__actions {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    &__cartBtn
+    {
+        border: none;
+        background-color: $light-color;
+        border-radius: 5px;
+        padding: 0.2rem;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    // &__actions>button {
+    //     background-color: $primary-color;
+    //     width: fit-content;
+    //     border-radius: 5px;
+    //     padding: 0.5rem 1rem;
+    //     color: #201e1a;
+    //     font-size: 1rem;
+    //     cursor: pointer;
+    //     border: none;
+    // }
+
+    // &__actions button:hover {
+    //     background-color: lighten($primary-color, 20%);
+    // }
+
+
+
+}

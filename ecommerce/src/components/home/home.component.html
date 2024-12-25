@@ -1,0 +1,31 @@
+<div class="home">
+
+    <div class="home__categoriesSection">
+        @for (category of categories; track category.id)
+        {
+        <app-category class="home__categoryItem" [category]="category"></app-category>
+    }
+    <div class="home__spinner">
+        <div class="home__spinnerPrevious">
+            <button class="home__spinnerPreviousBtn" >
+                    <img  style="width: 100%;" src="previous.png" />
+                </button>
+            </div>
+            <div class="home__spinnerNext">
+                <button class="home__spinnerNextBtn">
+                    <img  style="width: 100%;" src="next.png" />
+                </button>
+            </div>
+    </div>
+    </div>
+    <div class="home__deals">
+        <app-big-sale class="home__dealsFirst"  [title]="'More reasons to shop'" ></app-big-sale>
+        <app-big-sale class="home__dealsSecond" [title]="'Mega deals'" [backGroundColor]="'#FAFAD2'"></app-big-sale>
+        <app-big-sale class="home__dealsThird"  [title]="'In focus'"></app-big-sale>
+    </div>
+    <div class="home__recommendedSection">
+        <app-recommended-section></app-recommended-section>
+    </div>
+
+
+</div>

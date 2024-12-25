@@ -1,0 +1,40 @@
+<nav class="navBar">
+    <div class="navBar__container">
+        <div>
+            <img class="navBar__logo" src="https://f.nooncdn.com/s/app/com/noon/design-system/logos/noon-logo-en.svg"
+                alt="log" />
+        </div>
+        <div class="navBar__searchBar">
+            <app-search-bar (searchValue)="searchValue($event)"></app-search-bar>
+        </div>
+        <ul class="navBar__links">
+            <li class="navBar__item">
+                <button class="navBar__btn">
+                    <span class="navBar__link">العربية </span>
+                </button>
+            </li>
+            <li class="navBar__divider"></li>
+
+            <li class="navBar__item">
+                <button class="navBar__btn">
+                    <span class="navBar__link">Log in</span>
+                    <img style="width: 17px;" src="https://f.nooncdn.com/s/app/com/noon/icons/user_thin.svg" />
+                </button>
+            </li>
+            <li class="navBar__divider"></li>
+            <li class="navBar__item">
+                <button class="navBar__btn">
+                    <span class="navBar__link">wish List</span>
+                    <img style="width: 20px;height: 20px;" src="https://f.nooncdn.com/s/app/com/noon/icons/wishlist.svg" />
+                </button>
+            </li>
+            <li class="navBar__divider"></li>
+            <li class="navBar__item">
+                <button class="navBar__btn">
+                    <span class="navBar__link">cart </span>
+                    <img style="width: 20px;height: 20px;" src="https://f.nooncdn.com/s/app/com/noon/icons/cart.svg" />
+                </button>
+            </li>
+        </ul>
+    </div>
+</nav>

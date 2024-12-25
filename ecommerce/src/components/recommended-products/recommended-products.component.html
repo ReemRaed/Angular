@@ -1,0 +1,8 @@
+<div class="recommendedProducts">
+
+    @for (product of products; let i = $index; track product.id)
+    {
+    @if(i<itemsPerRow) {<app-product [product]="product"></app-product>}
+
+        }
+</div>

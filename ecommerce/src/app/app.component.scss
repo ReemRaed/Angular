@@ -1,0 +1,20 @@
+.app {
+    display: grid;
+    // grid-template-columns: 1fr; /* Sidebar and content */
+    grid-template-rows: auto 1fr auto;
+    gap: 0.5rem;
+    height: 100vh;
+
+
+    &__navBar {
+        grid-column: 1 / -1;
+    }
+
+    &__content {
+        grid-column: 2 / -1;
+    }
+
+    &__footer {
+        grid-column: 1 / -1;
+    }
+}

@@ -1,0 +1,42 @@
+@import "../../scss/abstracts/variables";
+@import "../../scss/abstracts/functions";
+@import "../../scss/abstracts/mixins";
+
+
+.simpleCard {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    border-radius: 6px;
+    box-shadow: 0 0 10px white;
+    background-color: #f7f7fa;
+    overflow: hidden;
+    gap: 0.5rem;
+
+    &__header {
+        background-color: transparent;
+    }
+
+    &__content {
+        flex: 1;
+        padding: 0 1rem 0.5rem 1rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        gap: 0.5rem
+        
+    }
+
+    &__contentTitle {
+        @include font_style();
+        font-weight: 700;
+    }
+
+    &__contentDescription {
+        @include font_style();
+        font-size: 0.8rem;
+
+    }
+
+}
+
