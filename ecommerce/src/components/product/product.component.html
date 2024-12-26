@@ -20,8 +20,14 @@
                     {
                         <img src="https://f.nooncdn.com/s/app/com/noon/icons/quick-atc-add-to-cart-grey.svg" alt="add-to-cart" width="24px" height="24px">
                     }
-                    @else {
-                        <app-add-remove-action-bar [itemsNumber]="5"></app-add-remove-action-bar>
+                    @if(!disabled) {
+                        @if(showActionBar)
+                        {
+                            <app-add-remove-action-bar [itemsNumber]="5"></app-add-remove-action-bar>
+                        }
+                        @else {
+                            <img src="https://f.nooncdn.com/s/app/com/noon/icons/quick-atc-add-to-cart-grey.svg" alt="add-to-cart" width="24px" height="24px">
+                        }
                     }
                 </button>
 
