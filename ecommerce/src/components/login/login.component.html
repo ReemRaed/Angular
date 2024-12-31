@@ -1,1 +1,63 @@
-<p>login works!</p>
+<dialog class="login" #loginDialog>
+    <button (click)="closeDialog()" class="login__icon">x</button>
+    <div class="login__header">
+        <p class="login__title">Get Started Now</p>
+        <p class="login__hint">Enter your credentials to access your account</p>
+    </div>
+    <form class="login__form" (ngSubmit)="onFormSubmitted()" #loginForm="ngForm">
+
+        <div class="login__control">
+            <label class="login__label">Name</label>
+            <input class="login__input" type="text" name="name" required #fname="ngModel" [(ngModel)]="user.userName" [minlength]="3"/>
+            @if (fname&&fname.invalid && fname.touched) {
+            <div>
+                @if (fname.errors?.['required'])
+                {
+                    <small class="login__input--invalid">* name is required</small>
+                }
+                @if (fname.errors?.['minlength']) {
+                <small class="login__input--invalid">* name must be more than 3 characters</small>
+                }
+            </div>
+            }
+        </div>
+
+        <div class="login__control">
+            <label class="login__label">Email</label>
+            <input class="login__input" type="email" name="email" #emailAddress="ngModel" required email  [(ngModel)]="user.emailAddress" />
+            @if (emailAddress&&emailAddress.invalid && emailAddress.touched) {
+                <div>
+                    @if (emailAddress.errors?.['required'])
+                    {
+                        <small class="login__input--invalid">* email is required</small>
+                    }
+                    @if (emailAddress.errors?.['email']) {
+                    <small class="login__input--invalid">* Invalid email format.</small>
+                    }
+                </div>
+                }
+        </div>
+
+        <div class="login__control">
+            <label class="login__label">Password</label>
+            <input class="login__input" type="password" name="password" #password="ngModel" required [(ngModel)]="user.password"  [minlength]="8"/>
+            @if (password&&password.invalid && password.touched) {
+                <div>
+                    @if (password.errors?.['required'])
+                    {
+                        <small class="login__input--invalid">* password is required</small>
+                    }
+                    @if (password.errors?.['minlength']) {
+                    <small class="login__input--invalid">* password must be more than 8 characters.</small>
+                    }
+                </div>
+                }
+        </div>
+
+        <input type="submit" class="login__btn" value="login" />
+
+        <h6>Have an account?</h6>
+
+    </form>
+
+</dialog>

@@ -16,7 +16,7 @@
             <li class="navBar__divider"></li>
 
             <li class="navBar__item">
-                <button class="navBar__btn">
+                <button class="navBar__btn" (click)="navigateToLogin()">
                     <span class="navBar__link">Log in</span>
                     <img style="width: 17px;" src="https://f.nooncdn.com/s/app/com/noon/icons/user_thin.svg" />
                 </button>
@@ -38,3 +38,8 @@
         </ul>
     </div>
 </nav>
+
+@if(showLogin)
+{
+    <app-login (closing)="cancel()"></app-login>
+}

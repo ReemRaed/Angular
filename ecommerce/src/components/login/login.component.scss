@@ -1,0 +1,126 @@
+@import "../../scss/abstracts/variables";
+@import "../../scss/abstracts/functions";
+@import "../../scss/abstracts/mixins";
+
+.login {
+    width: 500px;
+    height: 500px;
+    border-radius: 10px;
+    border: none;
+    position: absolute;
+    z-index: 2;
+    overflow: hidden;
+    background-color: $basic-color;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1rem;
+    align-items: center;
+    padding: 2rem;
+
+
+
+    &::backdrop {
+        background: rgba(0, 0, 0, 0.65);
+    }
+
+    &__icon {
+        width: 24px;
+        height: 24px;
+        border: none;
+        outline: none;
+        cursor: pointer;
+        margin-left: auto;
+        border-radius: 50%;
+    }
+
+    &__header {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        gap: 5px;
+    }
+
+    &__title {
+        color: $dark-color;
+        text-transform: capitalize;
+        @include font-style();
+        font-size: 1.5rem;
+    }
+
+    &__hint {
+        color: $dark-color;
+        text-transform: capitalize;
+        @include font-style();
+        font-size: 0.5rem;
+    }
+
+    &__form {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 1rem;
+    }
+
+    &__control {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        gap: 5px;
+    }
+
+    &__label {
+        @include font-style();
+
+    }
+
+    &__input {
+        border-radius: 10px;
+        border: 1px solid lightgray;
+        width: 327px;
+        height: auto;
+        padding: 0.5rem;
+
+        &:focus {
+            outline: none;
+            border: 1px solid #4c8bf5;
+        }
+
+        &--invalid {
+            font-weight: bold;
+            color: $validation-color;
+        }
+    }
+
+    &__btn {
+        @include font-style();
+        color: #4c8bf5;
+        border-radius: 10px;
+        border: 1px solid lightgray;
+        width: 327px;
+        height: auto;
+        padding: 0.5rem;
+
+        &:hover {
+            background-color: #4c8bf5;
+            color: white;
+            border: 1px solid #4c8bf5;
+        }
+    }
+
+    h6::after {
+        content: " Sign Up";
+        color: #4c8bf5;
+    }
+}
+
+
+input.ng-invalid.ng-touched {
+    border: $validation-color 2px solid;
+}

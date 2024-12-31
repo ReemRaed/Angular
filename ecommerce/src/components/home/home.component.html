@@ -1,5 +1,8 @@
 <div class="home">
 
+    <div class="home__cursor-images">
+        <app-image-cursor [images]="images"></app-image-cursor>
+    </div>
     <div class="home__categoriesSection">
         @for (category of categories; track category.id)
         {
@@ -26,6 +29,5 @@
     <div class="home__recommendedSection">
         <app-recommended-section></app-recommended-section>
     </div>
-
 
 </div>

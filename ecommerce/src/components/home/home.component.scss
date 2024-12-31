@@ -10,6 +10,14 @@
     background-color: $basic-color;
     justify-content: flex-start;
     
+    &__cursor-images
+    {
+        background-color:transparent;
+        height: 100px;
+        margin: 0 1.5rem 0 1.5rem;
+        height: 50vh;
+
+    }
     &__categoriesSection {
         box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
         display: flex;

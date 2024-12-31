@@ -1,0 +1,24 @@
+@import "../../scss/abstracts/variables";
+@import "../../scss/abstracts/functions";
+@import "../../scss/abstracts/mixins";
+
+// .slider
+// {
+//         width: 22px;
+//         height: 3px;
+//         background-color: $light-color;
+//         &--active
+//         {
+//             background-color: $primary-color;
+//         }
+// }
+
+:host {
+    display: block;
+    width: 22px;
+    height: 3px;
+    background-color: $light-color;
+}
+:host(.slider--active) {
+    background-color: $primary-color;
+}

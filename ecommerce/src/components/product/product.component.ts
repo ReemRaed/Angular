@@ -32,7 +32,6 @@ export class ProductComponent {
     setInterval(() => {
       this.currentWord = this.list[this.currentIndex];
       this.currentIndex = (this.currentIndex + 1) % this.list.length;
-      console.log(this.currentWord)
     }, 2000);
   }
   addToCart() {

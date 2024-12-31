@@ -4,16 +4,18 @@ import { CategoryComponent } from "../category/category.component";
 import { BigSaleComponent } from "../big-sale/big-sale.component";
 import { RecommendedProductsComponent } from "../recommended-products/recommended-products.component";
 import { RecommendedSectionComponent } from "../recommended-section/recommended-section.component";
+import { ImageCursorComponent } from "../../sharedComponents/image-cursor/image-cursor.component";
 
 @Component({
   selector: 'app-home',
-  imports: [CategoryComponent, BigSaleComponent, RecommendedSectionComponent],
+  imports: [CategoryComponent, BigSaleComponent, RecommendedSectionComponent, ImageCursorComponent],
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss'
 })
 export class HomeComponent {
 
   categories:Category[];
+  images:string[];
 
   constructor()
   {
@@ -29,6 +31,13 @@ export class HomeComponent {
       {id:9,name:"Holiday Sale",img:"https://f.nooncdn.com/mpcms/EN0003/assets/45430a68-ac0e-40f8-b8eb-627024371e8b.png?format=avif"},
       {id:10,name:"Mens Fashion",img:"https://f.nooncdn.com/mpcms/EN0003/assets/6d61f4d6-57c2-4028-b9fe-e97f8f432906.png?format=avif"},
     ];
+    this.images=[
+      "product1.png",
+      "product2.png",
+      "product3.png",
+      "product4.png",
+      "product5.png",
+    ]
   }
 
 
